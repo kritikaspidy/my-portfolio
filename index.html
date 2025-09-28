@@ -81,73 +81,7 @@
  </section>
 
 <!-- About section -->
-<section class="about" id="about" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
 
-    <h2 class="heading">About <span>Me</span></h2>
-    <div class="about-container-grid">
-        <div class="about-data">
-            <p class="description">"A problem solver at heart, I specialize in crafting scalable web applications that deliver a smooth user experience.
-            With a focus on both functionality and design, I aim to transform ideas into intuitive, reliable, and impactful
-            solutions."</p>
-
-            <div class="about-info">
-
-                <!-- Qualification Box -->
-                <div class="about-box" onclick="flipCard(this)">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <i class='bx bxs-graduation'></i>
-                            <h3 class="tittle">Qualification</h3>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1 class="subtittle">Chitkara University, Patiala (May'2026)</h1>
-                            <p>Bachelor of Technology in Software Engineering</p>
-                            <h1 class="subtittle">M.DAV Senior Secondary School, Ambala (2010-2022)</h1>
-                            <p>Matriculation</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certification Box -->
-                <div class="about-box" onclick="flipCard(this)">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <i class='bx bx-badge-check'></i>
-                            <h3 class="tittle">Certification</h3>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1 class="subtittle">Cisco Cyber Security</h1>
-                            <p>January'2023-May'2023.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Me Box -->
-                <div class="about-box" onclick="flipCard(this)">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <i class='bx bx-support'></i>
-                            <h3 class="tittle">Contact me</h3>
-                        </div>
-                        <div class="flip-card-back">
-                            <h1 class="subtittle">Email:<p> kritikagarg351@gmail.com</p></h1>
-                            <h1 class="subtittle">Phone:<p> 9896053531</p></h1>
-                            <!-- <h1 class="subtittle">Location:<p>Punjab, India</p>
-                            </h1>
-                            <h1 class="subtittle">Available For:<p>Internships & Freelance</p>
-                            </h1> -->
-
-                            
-                           
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</section>
 
 <!-- skills section -->
  
@@ -162,6 +96,7 @@
         <button class="filter-btn" onclick="filterSkills('database')">Database</button>
         <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
         <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control </button>
+        <button class="filter-btn" onclick="filterSkills('Programminglanguages')">Programming languages</button>
     </div>
 
     <!-- Skills List -->
@@ -170,14 +105,19 @@
         <li class="frontend">CSS</li>
         <li class="frontend">JavaScript</li>
         <li class="frontend">React JS</li>
+        <li class="frontend">Tailwind CSS</li>
+        <li class="frontend">Next.js</li>
         <li class="backend">Node.js</li>
         <li class="backend">Express.js</li>
-        <li class="database">SQL</li>
+        <li class="database">MySQL</li>
         <li class="database">PostgreSQL</li>
         <li class="Tools">Agile (Srum)</li>
         <li class="Tools">Jira</li>
+        <li class="Tools">Postman</li>
         <li class="VersionControl">Git</li>
         <li class="VersionControl">GitHub</li>
+        <li class="Programminglanguages">Java</li>
+        <li class="Programminglanguages">Python</li>
 
     </ul>
 </section>
@@ -185,56 +125,65 @@
 <!-- work section -->
 
 <section class="work" id="work" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    <h2 class="heading">My Projects</h2>
+    <div style="width: 500px; position: relative; text-align: center; margin: 0 auto; margin-bottom: 100px;">
+    <h2 class="heading">Check Out My Latest Work</h2>
+    <p style="color: grey; font-size: 2rem; ">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
+    </div>
     <div class="swiper container">
         <div class="swiper-wrapper">
 
-        <div class="card swiper-slide">
-            <img src="image/recipe.jpg" alt="image">
-            <h3 class="name">Plates & palettes: Recipe sharing platform (August 2024 – December 2024)</h3>
-            <p class="describe">● Designed a full-stack platform using React, Node.js (Express), and PostgreSQL for posting,
-            browsing, liking, commenting, and saving recipes. <br/>
-            <br/>
-            ● Integrated a shopping list generator and advanced filtering for personalized
-            recommendations. </p>
-            
+        <div class="card swiper-slide" style="background: #181818; color: #fff; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding:24px; margin-bottom:24px;" >
+            <img src="image/recipe.jpg" alt="image" style="border-radius:8px; max-width: 100%;">
+            <h3 style="margin:16px 0 6px 0; font-size:1.15rem;">Plates & palettes: Recipe sharing platform (Aug 2024 – Dec 2024)</h3>
+            <p style="font-size:1rem;margin-bottom:12px;line-height:1.5;">
+                Designed a full-stack platform using React, Node.js (Express), and PostgreSQL for posting, browsing, liking, commenting, and saving recipes.<br/><br/>
+                Integrated a shopping list generator and advanced filtering for personalized recommendations.
+            </p>
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">React</span>
+                <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">Node.js</span>
+                <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">PostgreSQL</span>
+            </div>
+            <a href="#" style="background:#fff;color:#222;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Source</a>
+             <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Website</a>
+       
         </div>
-        <div class="card swiper-slide">
-            <img src="image/pool.png" alt="image">
-            <h3 class="name">HydroSense – IoT Pool Optimization (2023)</h3>
-            <p class="describe">● Developed an IoT-powered water quality monitoring system for pools, integrating sensors
-            to track pH levels, temperature, and contaminants, with automated filtration control and
-            real-time alerts. <br/>
-            <br/>
-            ● Optimized data collection and analysis for efficient pool water management , ensuring
-            regulatory compliance and reducing manual intervention.</p>
-        </div>
-        <div class="card swiper-slide">
-            <img src="image/bus.png" alt="image">
-            <h3 class="name">Smart Public Bus Stand, 2023</h3>
-            <p class="describe">● Led IoT integration for enhanced public transportation. <br/> <br/>
-            ● Designed hardware and software, deployed successful
-            system showcasing IoT expertise <br/> <br/>
-            ● Integrated real-time tracking and passenger information system to improve the efficiency and convenience of public
-            transportation.
+
+        <div class="card swiper-slide" style="background: #181818; color: #fff; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding:24px; margin-bottom:24px;">
+        <img src="image/car-rental.png" style="border-radius:8px; max-width: 100%;" alt="image">
+        <h3 style="margin:16px 0 6px 0; font-size:1.15rem;">Car Rental Platform (January 2025 – June 2025)</h3>
+        <p style="font-size:1rem;margin-bottom:12px;line-height:1.5;">
+            This project involved engineering a full-stack, multi-tenant car rental platform using the MERN stack. The platform supports both renters and vendors by providing a secure backend with RESTful APIs, JWT-based authentication, and role-based access control (RBAC) for managing listings, bookings, and user data. A dynamic, responsive frontend with advanced search and filtering was built to ensure a smooth and seamless vehicle rental and booking experience.
         </p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">MERN Stack</span>
+            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">JWT Authentication</span>
+            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">RBAC</span>
         </div>
-        <div class="card swiper-slide">
-            <img src="image/agro.png" alt="image">
-            <h3 class="name">Agrobot, 2022</h3>
-            <p class="describe">● Managed development of robotic platforms integrating robotics, AI, and sensors. <br/> <br/> ● Conducted field trials, promoted sustainable farming practices. <br/> <br/> ● Optimized automation processes for planting, irrigation, and crop monitoring to improve efficiency and reduce labor costs.
+        <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Source</a>
+        <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Website</a>
+        </div>
+
+        <div class="card swiper-slide" style= "background: #181818; color: #fff; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding:24px; margin-bottom:24px;">
+        <img src="image/books.png" style="border-radius:8px; max-width: 100%;" alt="Product Data Explorer project">
+        <h3 style="margin:16px 0 6px 0; font-size:1.15rem;">Product Data Explorer Platform (August 2025 – September 2025)</h3>
+        <p style="font-size:1rem;margin-bottom:12px;line-height:1.5;">
+            Developed a full-stack product exploration platform, utilizing React, Next.js, TypeScript, and Tailwind CSS on the frontend and NestJS, Node.js, and PostgreSQL on the backend to provide on-demand product navigation, scraping, and exploration. The project implemented real-time data scraping, advanced caching, and dynamic navigation features, supporting category drilldowns, paging, reviews, and personalized recommendations with persistent browsing history. The platform delivers robust API endpoints, secure data handling, concurrency management, and extensive error logging with live deployed frontend and backend services.
         </p>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">React</span>
+            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">NestJS</span>
+            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">PostgreSQL</span>
         </div>
-        <div class="card swiper-slide">
-            <img src="image/library.png" alt="image">
-            <h3 class="name">Library management system, 2024</h3>
-            <p class="describe">● Developed robust system in c++, optimizing search and retrieval
-            with efficient algorithms. <br/> <br/>
-            ● Implemented a user-friendly interface for seamless book borrowing, returning, and tracking. <br/> <br/>
-            ● Implemented user authentication and authorization features, ensuring secure access and management of library
-            resources.
-        </p>
-        </div>
+        <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Source</a>
+         <a href="https://webscrapping-six.vercel.app/" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Website</a>
+           
+    </div>
+
+
+
+
+      
         <!-- <div class="card swiper-slide">
             <img src="image/four.png" alt="image">
             <h3 class="name">pqr lorem10</h3>
@@ -252,23 +201,24 @@
 
 <!-- contact me -->
 <section class="contact" id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    <h2 class="heading">Contact <span>Me!</span></h2>
-
-    <div class="contact-box">
-    <form id="contact-form">
-        <div class="input-box">
-            <input type="text" id="name" placeholder="Full Name">
-            <input type="email" id="email" placeholder="Email Address">
-        </div>
-        <div class="input-box">
-            <input type="number" id="mobile" placeholder="Mobile Number">
-            <input type="text" id="subject" placeholder="Email Subject">
-        </div>
-        <textarea name="" id="message" cols="30" rows="10" placeholder="Enter your message" ></textarea>
-        <input type="submit" value="Send Message" class="btn">
+  <h2 class="heading">Get in Touch</h2>
+  <div class="contact-box" style="text-align:center; background: #fff; border-radius:10px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+    <p style="margin-bottom:20px; font-size:1.1rem;">
+      Want to chat? Just shoot me a DM on 
+      <a href="https://x.com/kritikaagarg" style="color:#0ea5e9;text-decoration:underline;">X</a>
+      /
+      <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/" style="color:#0ea5e9;text-decoration:underline;">LinkedIn</a>
+      or send me an email at
+      <a href="mailto:kritikagarg351@gmail.com" style="color:#0ea5e9;text-decoration:underline;">kritikagarg351@gmail.com</a>
+    </p>
+    <form id="contact-form" style="max-width:350px;margin:auto;">
+      <input type="email" id="email" placeholder="Your Email" style="padding:10px;width:100%;border-radius:7px;border:1px solid #e5e7eb;font-size:0.96rem;margin-bottom:12px;">
+      <textarea id="message" cols="30" rows="5" placeholder="Enter your message" style="padding:10px;border-radius:7px;width:100%;border:1px solid #e5e7eb;font-size:0.96rem;"></textarea>
+      <input type="submit" value="Send Message" class="btn" style="width:100%;margin-top:10px;">
     </form>
-    </div>
+  </div>
 </section>
+
 
 <footer class="footer">
 
