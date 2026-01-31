@@ -134,43 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("HvzKH6rXLSuwvNAPM"); // Replace with your EmailJS Public Key
-
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        // Get form values
-        let name = document.getElementById("name").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let mobile = document.getElementById("mobile").value.trim();
-        let subject = document.getElementById("subject").value.trim();
-        let message = document.getElementById("message").value.trim();
-
-        // Validate input fields
-        if (name === "" || email === "" || message === "") {
-            alert("Please fill out all required fields.");
-            return;
-        }
-
-        // Prepare parameters for email
-        let params = { name, email, mobile, subject, message };
-
-        console.log("Sending message with params:", params); // Debugging log
-
-        // Send email using EmailJS
-        emailjs.send("service_06g5u91", "template_wafq7p1", params)
-            .then(function (response) {
-                alert("Message sent successfully!");
-                document.getElementById("contact-form").reset(); // Clear form after submission
-            })
-            .catch(function (error) {
-                alert("Failed to send message. Try again later.");
-                console.error("EmailJS Error:", error);
-            });
-    });
-});
-
 
 
 // Get the elements
@@ -188,19 +151,35 @@ closeBtn.addEventListener('click', () => {
     sidebar.classList.remove('active');
 });
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let message = document.getElementById("message").value.trim();
-    
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill out all fields.");
-        return;
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("HvzKH6rXLSuwvNAPM"); // Public key
 
-    // Proceed with EmailJS sending
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value,
+        };
+
+        emailjs
+            .send("service_06g5u91", "template_wafq7p1", params)
+            .then((res) => {
+                console.log("SUCCESS:", res.status, res.text);
+                alert("Message sent successfully!");
+                form.reset();
+            })
+            .catch((err) => {
+                console.error("FAILED:", err);
+                alert("Message failed. Check console.");
+            });
+    });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.getElementById("hamburger");

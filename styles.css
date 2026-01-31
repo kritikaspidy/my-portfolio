@@ -498,65 +498,82 @@ section {
         align-items: center;
         flex-direction: column;
         height: 100vh;
+        margin-bottom: 70px;
 }
 
 .contact h2{
     margin-bottom: 3rem;
 }
 
-.contact-box {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 10px;
-            padding: 20px;
-            width: 600px;
-            margin: auto;
-            
+
+
+        .contact-p{
+            font-size:1rem; 
+            color: black; 
+            text-align: center;
+            margin-bottom: 20px;
         }
 
+        .contact-p a{
+            color: var(--main-color);
+            font-weight: bold;
 
-.contact form{
-    max-width: 600px;
+           
+        }
 
-    margin: 1 rem auto;
+.contact form {
+    max-width: 300px;
+    margin: 1rem auto;
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.contact form .input-box{
+.contact form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 25px; /* adds space between inputs */
+    margin-bottom: 10px;
 }
 
 .contact form .input-box input, 
-.contact form textarea{
+.contact form textarea {
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
     background-color: var(--second-bg-color);
-    border-radius: .8rem;
-    margin: .7rem  0;
+    border-radius: 0.8rem;
+    box-sizing: border-box; /* ensures padding doesn't break width */
 }
 
-
-
-.contact form .input-box input{
-    width: 49%;
-    
+.contact form .input-box input.half-width {
+    width: calc(50% - 7.5px); /* two inputs side by side with gap */
 }
 
-.contact form textarea{
+.contact form textarea {
     resize: none;
+    margin-top: 10px;
+    margin-bottom: 10px; /* space below textarea */
 }
 
-.contact form .btn{
-    margin-top: 2rem;
+.contact form .btn {
+    margin-top: 1.5rem;
     cursor: pointer;
-
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 0.8rem;
+    border: none;
+    background-color: #0ea5e9; /* flat color */
+    color: white;
+    transition: background 0.3s ease;
+    box-shadow: none; /* remove brightness/shadow */
 }
+
+.contact form .btn:hover {
+    background-color: #0284c7; /* slightly darker on hover */
+}
+
 
 .hide {
     display: none;
