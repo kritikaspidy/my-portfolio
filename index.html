@@ -11,6 +11,7 @@
 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body class="light-mode">
@@ -77,6 +78,8 @@
             <span class="meta-pill"><i class="bx bx-map"></i> India</span>
           </div>
 
+          <div class="now-strip">Currently open to Full Stack / Backend internships • Remote/India</div>
+
           <div class="cta-row">
             <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
             <a href="#work" class="btn btn--secondary">View Work</a>
@@ -142,44 +145,74 @@
     <section class="section" id="skills" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
       <div class="section-head">
         <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">Focused tools I use to build and ship.</p>
+        <p class="section-subtitle">Tools I use to build and ship products.</p>
       </div>
 
-      <div class="filter-buttons">
-        <button class="filter-btn" onclick="filterSkills('all')">All</button>
-        <button class="filter-btn" onclick="filterSkills('frontend')">Frontend</button>
-        <button class="filter-btn" onclick="filterSkills('backend')">Backend</button>
-        <button class="filter-btn" onclick="filterSkills('database')">Database</button>
-        <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
-        <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control</button>
-        <button class="filter-btn" onclick="filterSkills('Programminglanguages')">Languages</button>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-card__top">
+            <div class="skill-icons" aria-label="Frontend logos">
+              <i class="devicon-html5-plain colored" title="HTML"></i>
+              <i class="devicon-css3-plain colored" title="CSS"></i>
+              <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+              <i class="devicon-react-original colored" title="React"></i>
+              <i class="devicon-nextjs-original" title="Next.js"></i>
+              <i class="devicon-tailwindcss-original colored" title="Tailwind CSS"></i>
+            </div>
+            <h3 class="skill-card__title">Frontend</h3>
+          </div>
+          <p class="skill-card__desc">Responsive UI, components, state management, and performance.</p>
+          <div class="skill-list" aria-label="Frontend skills">
+            <span>React</span><span>Next.js</span><span>JavaScript</span><span>HTML/CSS</span><span>Tailwind</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card__top">
+            <div class="skill-icons" aria-label="Backend logos">
+              <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+              <i class="devicon-express-original" title="Express"></i>
+              <i class="devicon-python-plain colored" title="Python"></i>
+              <i class="devicon-fastapi-plain colored" title="FastAPI"></i>
+            </div>
+            <h3 class="skill-card__title">Backend</h3>
+          </div>
+          <p class="skill-card__desc">APIs, authentication, integrations, error handling, and reliability.</p>
+          <div class="skill-list" aria-label="Backend skills">
+            <span>FastAPI</span><span>Node.js</span><span>Express</span><span>OAuth</span><span>REST</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card__top">
+            <div class="skill-icons" aria-label="Database logos">
+              <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+              <i class="devicon-mysql-plain colored" title="MySQL"></i>
+            </div>
+            <h3 class="skill-card__title">Database</h3>
+          </div>
+          <p class="skill-card__desc">Schema design, relations, indexing, and writing clean queries.</p>
+          <div class="skill-list" aria-label="Database skills">
+            <span>PostgreSQL</span><span>MySQL</span><span>Joins</span><span>Indexes</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <div class="skill-card__top">
+            <div class="skill-icons" aria-label="Tools logos">
+              <i class="devicon-git-plain colored" title="Git"></i>
+              <i class="devicon-github-original" title="GitHub"></i>
+              <i class="devicon-postman-plain colored" title="Postman"></i>
+              <i class="devicon-jira-plain colored" title="Jira"></i>
+            </div>
+            <h3 class="skill-card__title">Tools</h3>
+          </div>
+          <p class="skill-card__desc">Version control, API testing, and execution workflows.</p>
+          <div class="skill-list" aria-label="Tools skills">
+            <span>Git</span><span>GitHub</span><span>Postman</span><span>Jira</span><span>Scrum</span>
+          </div>
+        </article>
       </div>
-
-      <ul class="skills-list" id="skills-list">
-        <li class="skill frontend">HTML</li>
-        <li class="skill frontend">CSS</li>
-        <li class="skill frontend">JavaScript</li>
-        <li class="skill frontend">React</li>
-        <li class="skill frontend">Next.js</li>
-        <li class="skill frontend">Tailwind</li>
-
-        <li class="skill backend">Node.js</li>
-        <li class="skill backend">Express</li>
-        <li class="skill backend">FastAPI</li>
-
-        <li class="skill database">PostgreSQL</li>
-        <li class="skill database">MySQL</li>
-
-        <li class="skill Tools">Postman</li>
-        <li class="skill Tools">Jira</li>
-        <li class="skill Tools">Agile (Scrum)</li>
-
-        <li class="skill VersionControl">Git</li>
-        <li class="skill VersionControl">GitHub</li>
-
-        <li class="skill Programminglanguages">Java</li>
-        <li class="skill Programminglanguages">Python</li>
-      </ul>
     </section>
 
     <!-- Work -->
@@ -189,11 +222,17 @@
         <p class="section-subtitle">A few projects I’ve built and shipped.</p>
       </div>
 
-      <div class="swiper work-swiper">
+     
+      <!-- Mobile: swiper only -->
+      <div class="swiper work-swiper work-swiper--mobile">
         <div class="swiper-wrapper">
 
           <article class="project-card swiper-slide">
-            <img class="project-card__img" src="image/constructureai.png" alt="Constructure AI Email Assistant" loading="lazy" />
+            <div class="project-card__media">
+              <img class="project-card__img" src="image/constructureai.png" alt="Constructure AI Email Assistant" loading="lazy" />
+              <div class="project-card__overlay"></div>
+            </div>
+
             <div class="project-card__body">
               <h3 class="project-card__title">Constructure AI – AI Email Assistant</h3>
               <p class="project-card__meta">Feb 2026 • OAuth • Gmail API • Automation</p>
@@ -211,14 +250,18 @@
               </div>
 
               <div class="btn-row">
-                <a class="btn btn--secondary btn--sm" href="https://github.com/kritikaspidy/Constructure-AI.git" target="_blank" rel="noreferrer">Source</a>
+                <a class="btn btn--secondary btn--sm" href="https://github.com/kritikaspidy/Constructure-AI.git" target="_blank" rel="noreferrer">Code</a>
                 <a class="btn btn--primary btn--sm" href="https://constructure-ai-cyan.vercel.app" target="_blank" rel="noreferrer">Live</a>
               </div>
             </div>
           </article>
 
           <article class="project-card swiper-slide">
-            <img class="project-card__img" src="image/recipe.jpg" alt="Plates & Palettes" loading="lazy" />
+            <div class="project-card__media">
+              <img class="project-card__img" src="image/recipe.jpg" alt="Plates & Palettes" loading="lazy" />
+              <div class="project-card__overlay"></div>
+            </div>
+
             <div class="project-card__body">
               <h3 class="project-card__title">Plates & Palettes – Recipe Platform</h3>
               <p class="project-card__meta">Aug–Dec 2024 • Social • Recommendations</p>
@@ -235,14 +278,17 @@
               </div>
 
               <div class="btn-row">
-                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Source</a>
-                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Website</a>
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Code</a>
               </div>
             </div>
           </article>
 
           <article class="project-card swiper-slide">
-            <img class="project-card__img" src="image/car-rental.png" alt="Car Rental Platform" loading="lazy" />
+            <div class="project-card__media">
+              <img class="project-card__img" src="image/car-rental.png" alt="Car Rental Platform" loading="lazy" />
+              <div class="project-card__overlay"></div>
+            </div>
+
             <div class="project-card__body">
               <h3 class="project-card__title">Car Rental Platform</h3>
               <p class="project-card__meta">Jan–Jun 2025 • RBAC • Bookings</p>
@@ -258,14 +304,17 @@
               </div>
 
               <div class="btn-row">
-                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Source</a>
-                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Website</a>
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Code</a>
               </div>
             </div>
           </article>
 
           <article class="project-card swiper-slide">
-            <img class="project-card__img" src="image/books.png" alt="Product Data Explorer Platform" loading="lazy" />
+            <div class="project-card__media">
+              <img class="project-card__img" src="image/books.png" alt="Product Data Explorer Platform" loading="lazy" />
+              <div class="project-card__overlay"></div>
+            </div>
+
             <div class="project-card__body">
               <h3 class="project-card__title">Product Data Explorer</h3>
               <p class="project-card__meta">Aug–Sep 2025 • Scraping • Caching</p>
@@ -281,7 +330,7 @@
               </div>
 
               <div class="btn-row">
-                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Source</a>
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Code</a>
                 <a class="btn btn--primary btn--sm" href="https://webscrapping-six.vercel.app/" target="_blank" rel="noreferrer">Live</a>
               </div>
             </div>
@@ -329,7 +378,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer__inner">
-        <p class="footer__text">© <span id="year"></span> Kritika Garg</p>
+        <p class="footer__text">Kritika Garg</p>
 
         <div class="footer__social">
           <a class="icon-link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
