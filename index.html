@@ -1,297 +1,331 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kritika Garg | Resume</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kritika Garg | Portfolio</title>
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    </head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="swiper-bundle.min.css">
-<!-- AOS CSS -->
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
-<body>
+<body class="dark-mode">
 
-    <header class="header">
+  <!-- Header -->
+  <header class="header">
     <a href="#" class="logo">Portfolio</a>
 
-    <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact Me</a>
-        <!-- <i class='bx bx-cog' id="menu-icon"></i> -->
-        <a href="#" class="settings-icon"><i class='bx bx-cog' id="menu-icon"></i></a> <!-- Added settings icon link -->
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#contact" class="nav-link">Contact Me</a>
 
-
+      <a href="#" class="settings-icon" aria-label="Open settings">
+        <i class='bx bx-cog' id="menu-icon"></i>
+      </a>
     </nav>
-    <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-    </div>
-</header>
 
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-        <span class="close-btn" id="close-btn">&times;</span>
-        <h2>Settings</h2>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar" aria-label="Settings sidebar">
+    <div class="sidebar__header">
+      <button class="sidebar__close" id="close-btn" aria-label="Close settings">&times;</button>
+      <h2 class="sidebar__title">Settings</h2>
     </div>
-    <ul class="sidebar-links">
-        <li>
-        <button id="theme-toggle" class="theme-btn">
-            <i class="fas fa-moon"></i> <!-- Default icon -->
+
+    <ul class="sidebar__links">
+      <li class="sidebar__item">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
         </button>
-        </li>
+      </li>
     </ul>
-</div>
+  </aside>
 
-<!-- home section -->
- <section class="home" id="home">
-    <div class="home-content">
-        <h3>Hello, Its me.</h3>
-        <h1>Kritika Garg</h1>
-        <h3>And I'm a <span class="typing"></span></h3>
-        <p> "Empowering innovation through code, building the future with every project." </p>
+  <!-- Home -->
+  <section class="home section" id="home">
+    <div class="home__content">
+      <h3 class="home__hello">Hello, Its me.</h3>
+      <h1 class="home__name">Kritika Garg</h1>
 
-        <div class="social-media">
-            <a href="https://www.instagram.com/accounts/login/?hl=en" target ="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://x.com/kritikaagarg" target ="_blank"><i class="bx bxl-twitter" ></i></a>
-            <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target ="_blank"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://github.com/kritikaspidy" target ="_blank"><i class="bx  bxl-github"></i></a>
-        </div>
-        <a href="image/cv.pdf" class="btn" download="cv">Download Cv</a>
+      <h3 class="home__role">
+        And I'm a <span class="typing"></span>
+      </h3>
+
+      <p class="home__quote">"Empowering innovation through code, building the future with every project."</p>
+
+      <div class="social-media">
+        <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <i class='bx bxl-instagram'></i>
+        </a>
+        <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+        <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <i class="bx bxl-github"></i>
+        </a>
+      </div>
+
+      <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
     </div>
 
-    <div class="home-img">
-        <img src="image/myy.JPG" alt="profile picture" loading="lazy">
+    <div class="home__img">
+      <img class="profile-img" src="image/myy.JPG" alt="profile picture" loading="lazy" />
     </div>
- </section>
+  </section>
 
-<!-- About section -->
+  <!-- About (placeholder - keep id for nav) -->
+  <section class="about section" id="about">
+    <div class="section-head">
+      <h2 class="section-title">About</h2>
+      <p class="section-subtitle">Full-stack developer focused on backend systems, integrations, and building reliable production apps.</p>
+    </div>
+  </section>
 
+  <!-- Skills -->
+  <section class="skills section" id="skills" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
+    <div class="section-head">
+      <h2 class="section-title">Skills</h2>
+    </div>
 
-<!-- skills section -->
- 
-<section class="skills" id="skills" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-    <h2 class="heading">Skills</h2>
-
-    <!-- Filter Buttons -->
     <div class="filter-buttons">
-        <button class="filter-btn" onclick="filterSkills('all')">All Skills</button>
-        <button class="filter-btn" onclick="filterSkills('frontend')">Frontend</button>
-        <button class="filter-btn" onclick="filterSkills('backend')">Backend</button>
-        <button class="filter-btn" onclick="filterSkills('database')">Database</button>
-        <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
-        <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control </button>
-        <button class="filter-btn" onclick="filterSkills('Programminglanguages')">Programming languages</button>
+      <button class="filter-btn" onclick="filterSkills('all')">All Skills</button>
+      <button class="filter-btn" onclick="filterSkills('frontend')">Frontend</button>
+      <button class="filter-btn" onclick="filterSkills('backend')">Backend</button>
+      <button class="filter-btn" onclick="filterSkills('database')">Database</button>
+      <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
+      <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control</button>
+      <button class="filter-btn" onclick="filterSkills('Programminglanguages')">Programming languages</button>
     </div>
 
-    <!-- Skills List -->
-    <ul id="skills-list">
-        <li class="frontend">HTML</li>
-        <li class="frontend">CSS</li>
-        <li class="frontend">JavaScript</li>
-        <li class="frontend">React JS</li>
-        <li class="frontend">Tailwind CSS</li>
-        <li class="frontend">Next.js</li>
-        <li class="backend">Node.js</li>
-        <li class="backend">Express.js</li>
-        <li class="database">MySQL</li>
-        <li class="database">PostgreSQL</li>
-        <li class="Tools">Agile (Srum)</li>
-        <li class="Tools">Jira</li>
-        <li class="Tools">Postman</li>
-        <li class="VersionControl">Git</li>
-        <li class="VersionControl">GitHub</li>
-        <li class="Programminglanguages">Java</li>
-        <li class="Programminglanguages">Python</li>
+    <ul class="skills-list" id="skills-list">
+      <li class="skill frontend">HTML</li>
+      <li class="skill frontend">CSS</li>
+      <li class="skill frontend">JavaScript</li>
+      <li class="skill frontend">React JS</li>
+      <li class="skill frontend">Tailwind CSS</li>
+      <li class="skill frontend">Next.js</li>
 
+      <li class="skill backend">Node.js</li>
+      <li class="skill backend">Express.js</li>
+
+      <li class="skill database">MySQL</li>
+      <li class="skill database">PostgreSQL</li>
+
+      <li class="skill Tools">Agile (Scrum)</li>
+      <li class="skill Tools">Jira</li>
+      <li class="skill Tools">Postman</li>
+
+      <li class="skill VersionControl">Git</li>
+      <li class="skill VersionControl">GitHub</li>
+
+      <li class="skill Programminglanguages">Java</li>
+      <li class="skill Programminglanguages">Python</li>
     </ul>
-</section>
+  </section>
 
-<!-- work section -->
-
-<section class="work" id="work" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    <div style="width: 500px; position: relative; text-align: center; margin: 0 auto; margin-bottom: 100px;">
-    <h2 class="heading">Check Out My Latest Work</h2>
-    <p style="color: grey; font-size: 2rem; ">I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</p>
+  <!-- Work -->
+  <section class="work section" id="work" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+    <div class="section-head section-head--work">
+      <h2 class="section-title">Check Out My Latest Work</h2>
+      <p class="section-subtitle">
+        I've worked on a variety of projects, from simple websites to complex web applications.
+        Here are a few of my favorites.
+      </p>
     </div>
+
     <div class="swiper container">
-        <div class="swiper-wrapper">
+      <div class="swiper-wrapper">
 
-        <div class="card swiper-slide" style="background: #181818; color: #fff; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding:24px; margin-bottom:24px;" >
-            <img src="image/recipe.jpg" alt="image" style="border-radius:8px; max-width: 100%;">
-            <h3 style="margin:16px 0 6px 0; font-size:1.15rem;">Plates & palettes: Recipe sharing platform (Aug 2024 – Dec 2024)</h3>
-            <p style="font-size:1rem;margin-bottom:12px;line-height:1.5;">
-                Designed a full-stack platform using React, Node.js (Express), and PostgreSQL for posting, browsing, liking, commenting, and saving recipes.<br/><br/>
-                Integrated a shopping list generator and advanced filtering for personalized recommendations.
-            </p>
-            <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">React</span>
-                <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">Node.js</span>
-                <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">PostgreSQL</span>
-            </div>
-            <a href="#" style="background:#fff;color:#222;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Source</a>
-             <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Website</a>
-       
-        </div>
+        <!-- Constructure AI -->
+        <article class="project-card swiper-slide">
+          <img class="project-card__img" src="image/constructureai.png" alt="Constructure AI Email Assistant" loading="lazy" />
+          <h3 class="project-card__title">Constructure AI – AI Powered Email Assistant (Feb 2026)</h3>
 
-        <div class="card swiper-slide" style="background: #181818; color: #fff; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding:24px; margin-bottom:24px;">
-        <img src="image/car-rental.png" style="border-radius:8px; max-width: 100%;" alt="image">
-        <h3 style="margin:16px 0 6px 0; font-size:1.15rem;">Car Rental Platform (January 2025 – June 2025)</h3>
-        <p style="font-size:1rem;margin-bottom:12px;line-height:1.5;">
-            This project involved engineering a full-stack, multi-tenant car rental platform using the MERN stack. The platform supports both renters and vendors by providing a secure backend with RESTful APIs, JWT-based authentication, and role-based access control (RBAC) for managing listings, bookings, and user data. A dynamic, responsive frontend with advanced search and filtering was built to ensure a smooth and seamless vehicle rental and booking experience.
-        </p>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">MERN Stack</span>
-            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">JWT Authentication</span>
-            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">RBAC</span>
-        </div>
-        <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Source</a>
-        <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Website</a>
-        </div>
+          <p class="project-card__desc">
+            Built a full-stack AI email assistant as a technical challenge with Google OAuth login,
+            Gmail API integration, and an AI dashboard to read, summarize, draft replies, and delete emails.
+            <br /><br />
+            Deployed frontend on Vercel and backend with FastAPI, handling authentication, token refresh, and secure email automation.
+          </p>
 
-        <div class="card swiper-slide" style= "background: #181818; color: #fff; border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding:24px; margin-bottom:24px;">
-        <img src="image/books.png" style="border-radius:8px; max-width: 100%;" alt="Product Data Explorer project">
-        <h3 style="margin:16px 0 6px 0; font-size:1.15rem;">Product Data Explorer Platform (August 2025 – September 2025)</h3>
-        <p style="font-size:1rem;margin-bottom:12px;line-height:1.5;">
-            Developed a full-stack product exploration platform, utilizing React, Next.js, TypeScript, and Tailwind CSS on the frontend and NestJS, Node.js, and PostgreSQL on the backend to provide on-demand product navigation, scraping, and exploration. The project implemented real-time data scraping, advanced caching, and dynamic navigation features, supporting category drilldowns, paging, reviews, and personalized recommendations with persistent browsing history. The platform delivers robust API endpoints, secure data handling, concurrency management, and extensive error logging with live deployed frontend and backend services.
-        </p>
-        <div style="display:flex; gap:8px; flex-wrap:wrap;">
-            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">React</span>
-            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">NestJS</span>
-            <span style="background:#fff; padding:4px 10px; border-radius:6px; font-size:0.95rem; color: #181818;">PostgreSQL</span>
-        </div>
-        <a href="#" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Source</a>
-         <a href="https://webscrapping-six.vercel.app/" style="background:#fff;color:#181818;padding:8px 18px;margin-top:16px;border-radius:7px;display:inline-block;text-decoration:none;font-weight:500;">Website</a>
-           
+          <div class="tag-list">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Google OAuth</span>
+            <span class="tag">Gmail API</span>
+            <span class="tag">AI Integration</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn--light" href="https://github.com/kritikaspidy/Constructure-AI.git" target="_blank" rel="noreferrer">Source</a>
+            <a class="btn btn--light" href="https://constructure-ai-cyan.vercel.app" target="_blank" rel="noreferrer">Live App</a>
+          </div>
+        </article>
+
+        <!-- Plates & Palettes -->
+        <article class="project-card swiper-slide">
+          <img class="project-card__img" src="image/recipe.jpg" alt="Plates & Palettes" loading="lazy" />
+          <h3 class="project-card__title">Plates & Palettes: Recipe Sharing Platform (Aug 2024 – Dec 2024)</h3>
+
+          <p class="project-card__desc">
+            Designed a full-stack platform using React, Node.js (Express), and PostgreSQL for posting, browsing,
+            liking, commenting, and saving recipes.
+            <br /><br />
+            Integrated a shopping list generator and advanced filtering for personalized recommendations.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Source</a>
+            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Website</a>
+          </div>
+        </article>
+
+        <!-- Car Rental -->
+        <article class="project-card swiper-slide">
+          <img class="project-card__img" src="image/car-rental.png" alt="Car Rental Platform" loading="lazy" />
+          <h3 class="project-card__title">Car Rental Platform (Jan 2025 – Jun 2025)</h3>
+
+          <p class="project-card__desc">
+            Engineered a full-stack multi-tenant car rental platform using the MERN stack.
+            Implemented REST APIs, JWT authentication, and role-based access control (RBAC) for listings, bookings, and users.
+            Built a responsive frontend with advanced search and filters for a smooth booking experience.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">MERN Stack</span>
+            <span class="tag">JWT Auth</span>
+            <span class="tag">RBAC</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Source</a>
+            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Website</a>
+          </div>
+        </article>
+
+        <!-- Product Data Explorer -->
+        <article class="project-card swiper-slide">
+          <img class="project-card__img" src="image/books.png" alt="Product Data Explorer Platform" loading="lazy" />
+          <h3 class="project-card__title">Product Data Explorer Platform (Aug 2025 – Sep 2025)</h3>
+
+          <p class="project-card__desc">
+            Developed a product exploration platform using React/Next.js/TypeScript/Tailwind on the frontend and NestJS + PostgreSQL on the backend.
+            Implemented real-time scraping, caching, paging, and persistent browsing history with robust error handling.
+          </p>
+
+          <div class="tag-list">
+            <span class="tag">React</span>
+            <span class="tag">NestJS</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Source</a>
+            <a class="btn btn--light" href="https://webscrapping-six.vercel.app/" target="_blank" rel="noreferrer">Website</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section" id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+    <div class="section-head">
+      <h2 class="section-title">Get in Touch</h2>
     </div>
 
+    <div class="contact-box">
+      <h3 class="contact-box__title">Want to chat?</h3>
 
+      <p class="contact-box__text">
+        Just shoot me a DM on
+        <a class="contact-link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
+        /
+        <a class="contact-link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <br />
+        or send me an email at
+        <br />
+        <a class="contact-link" href="mailto:kritikagarg351@gmail.com">kritikagarg351@gmail.com</a>
+      </p>
 
+      <form class="contact-form" id="contact-form">
+        <input class="input" type="text" id="name" placeholder="Your Name" required />
+        <input class="input" type="email" id="email" placeholder="Your Email" required />
+        <input class="input" type="text" id="subject" placeholder="Subject" />
 
-      
-        <!-- <div class="card swiper-slide">
-            <img src="image/four.png" alt="image">
-            <h3 class="name">pqr lorem10</h3>
-            <p class="describe">it is a project loren5</p>
-        </div> -->
+        <textarea class="textarea" id="message" rows="5" placeholder="Enter your message" required></textarea>
 
+        <input type="submit" value="Send Message" class="btn btn--primary btn--submit" />
+      </form>
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    
-    </div>
+  </section>
 
-</section>
-
-<!-- contact me -->
-<section class="contact" id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-  <h2 class="heading">Get in Touch</h2>
-  <div class="contact-box" style="width: 400px;text-align:center; background: #dadada; border-radius:10px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-    <h2 style="color: black; margin-bottom: 5px;"> Want to chat? </h2>
-    <p class="contact-p" >
-     Just shoot me a DM on
-      <a href="https://x.com/kritikaagarg">X</a>
-      /
-      <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/" >LinkedIn</a>
-    </br>
-    or send me an email at
-    <br>
-      <a href="mailto:kritikagarg351@gmail.com" >kritikagarg351@gmail.com</a>
-</br>
-    </p>
-    <form id="contact-form">
-  <input 
-    type="text" 
-    id="name" 
-    placeholder="Your Name" 
-    required
-  >
-
-  <input 
-    type="email" 
-    id="email" 
-    placeholder="Your Email" 
-    required
-  ><input 
-    type="text" 
-    id="subject" 
-    placeholder="Subject"
-  >
-
-  <textarea 
-    id="message" 
-    rows="5" 
-    placeholder="Enter your message" 
-    required
-  ></textarea>
-
-  <input type="submit" value="Send Message" class="btn">
-</form>
-
-  </div>
-</section>
-
-
-<footer class="footer">
-
+  <!-- Footer -->
+  <footer class="footer">
     <div class="footerbg">
-        <div class="footer-container">
-            <div class="">
-                <h1 class="tittle-footer">Kritika Garg</h1>
-                <span class="footer-subtittle">Fullstack Developer</span>
-            </div>
-            
-            <ul class="link-footer">
-                <li>
-                <a href="#skills">Skills</a>
-                </li>
-                <li>
-                <a href="#contact">Connect</a>
-                </li>
-                <li>
-                <a href="#work">Work</a>
-                </li>
-            </ul>
-
-            <div class="social-media-footer">
-                <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href="https://x.com/kritikaagarg" target ="_blank"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target ="_blank"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/kritikaspidy" target ="_blank"><i class="bx  bxl-github"></i></a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2 class="footer-title">Kritika Garg</h2>
+          <span class="footer-subtitle">Fullstack Developer</span>
         </div>
-        <!-- <p></p> -->
-    </div>
-</footer>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> -->
+        <ul class="footer-links">
+          <li><a class="footer-link" href="#skills">Skills</a></li>
+          <li><a class="footer-link" href="#contact">Connect</a></li>
+          <li><a class="footer-link" href="#work">Work</a></li>
+        </ul>
+
+        <div class="footer-social">
+          <a class="footer-social__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <i class='bx bxl-instagram'></i>
+          </a>
+          <a class="footer-social__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a class="footer-social__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a class="footer-social__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="scripts.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script src="swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init(); // Initialize AOS
-</script>
+  <script src="swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
 </body>
-
 </html>
-
