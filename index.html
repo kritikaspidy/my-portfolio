@@ -15,97 +15,99 @@
 
 <body class="light-mode">
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="#home" class="logo">Kritika Garg</a>
+  <!-- PAGE SHELL (limits overall width) -->
+  <div class="shell">
 
-      <nav class="navbar" id="navbar" aria-label="Primary navigation">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#contact" class="nav-link">Contact</a>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="#home" class="logo">Kritika Garg</a>
 
-        <button class="icon-btn settings-icon" type="button" aria-label="Open settings">
-          <i class='bx bx-cog' id="menu-icon"></i>
-        </button>
-      </nav>
+        <nav class="navbar" id="navbar" aria-label="Primary navigation">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#work" class="nav-link">Work</a>
+          <a href="#contact" class="nav-link">Contact</a>
 
-      <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-  </header>
+          <button class="icon-btn settings-icon" type="button" aria-label="Open settings">
+            <i class='bx bx-cog' id="menu-icon"></i>
+          </button>
+        </nav>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar" aria-label="Settings sidebar">
-    <div class="sidebar__header">
-      <h2 class="sidebar__title">Settings</h2>
-      <button class="icon-btn sidebar__close" id="close-btn" aria-label="Close settings">&times;</button>
-    </div>
-
-    <div class="sidebar__content">
-      <div class="setting-row">
-        <div>
-          <p class="setting-title">Theme</p>
-          <p class="setting-subtitle">Toggle light/dark</p>
-        </div>
-        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
-    </div>
-  </aside>
+    </header>
 
-  <!-- Home -->
-  <section class="section hero" id="home">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <p class="kicker">Full-stack Developer</p>
-        <h1 class="hero__title">Hi, I’m Kritika.</h1>
-
-        <p class="hero__subtitle">
-          I build reliable web apps with a focus on backend systems, integrations, and production readiness.
-        </p>
-
-        <div class="hero__meta">
-          <span class="meta-pill"><i class="bx bx-code-alt"></i> <span class="typing"></span></span>
-          <span class="meta-pill"><i class="bx bx-map"></i> India</span>
-        </div>
-
-        <div class="cta-row">
-          <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
-          <a href="#work" class="btn btn--secondary">View Work</a>
-        </div>
-
-        <div class="social-media">
-          <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <i class='bx bxl-instagram'></i>
-          </a>
-          <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-            <i class="bx bxl-twitter"></i>
-          </a>
-          <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <i class="bx bxl-linkedin"></i>
-          </a>
-          <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <i class="bx bxl-github"></i>
-          </a>
-        </div>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Settings sidebar">
+      <div class="sidebar__header">
+        <h2 class="sidebar__title">Settings</h2>
+        <button class="icon-btn sidebar__close" id="close-btn" aria-label="Close settings">&times;</button>
       </div>
 
-      <div class="hero__image">
-        <div class="avatar">
-          <img class="avatar__img" src="image/profile.jpeg" alt="Kritika Garg" loading="lazy" />
+      <div class="sidebar__content">
+        <div class="setting-row">
+          <div>
+            <p class="setting-title">Theme</p>
+            <p class="setting-subtitle">Toggle light/dark</p>
+          </div>
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
       </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
+    <!-- Home -->
+    <section class="section hero" id="home">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="kicker">Full-stack Developer</p>
+          <h1 class="hero__title">Hi, I’m Kritika.</h1>
+
+          <p class="hero__subtitle">
+            I build reliable web apps with a focus on backend systems, integrations, and production readiness.
+          </p>
+
+          <div class="hero__meta">
+            <span class="meta-pill"><i class="bx bx-code-alt"></i> <span class="typing"></span></span>
+            <span class="meta-pill"><i class="bx bx-map"></i> India</span>
+          </div>
+
+          <div class="cta-row">
+            <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
+            <a href="#work" class="btn btn--secondary">View Work</a>
+          </div>
+
+          <div class="social-media">
+            <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <i class='bx bxl-instagram'></i>
+            </a>
+            <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <i class="bx bxl-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__image">
+          <div class="avatar">
+            <img class="avatar__img" src="image/profile.jpeg" alt="Kritika Garg" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
       <div class="section-head">
         <h2 class="section-title">About</h2>
         <p class="section-subtitle">
@@ -116,8 +118,7 @@
       <div class="about-card">
         <p class="about-text">
           I like working on the “hard parts” that decide whether an app feels solid: authentication, API design,
-          integrations, edge cases, and debugging. I care about clean code, clear structure, and shipping features
-          that work end-to-end.
+          integrations, edge cases, and debugging. I care about clean structure and shipping end-to-end features.
         </p>
 
         <div class="about-stats">
@@ -135,12 +136,10 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section class="section" id="skills" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
-    <div class="container">
+    <!-- Skills -->
+    <section class="section" id="skills" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
       <div class="section-head">
         <h2 class="section-title">Skills</h2>
         <p class="section-subtitle">Focused tools I use to build and ship.</p>
@@ -181,18 +180,16 @@
         <li class="skill Programminglanguages">Java</li>
         <li class="skill Programminglanguages">Python</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Work -->
-  <section class="section" id="work" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-    <div class="container">
+    <!-- Work -->
+    <section class="section" id="work" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
       <div class="section-head">
         <h2 class="section-title">Work</h2>
         <p class="section-subtitle">A few projects I’ve built and shipped.</p>
       </div>
 
-      <div class="swiper container">
+      <div class="swiper work-swiper">
         <div class="swiper-wrapper">
 
           <article class="project-card swiper-slide">
@@ -202,8 +199,8 @@
               <p class="project-card__meta">Feb 2026 • OAuth • Gmail API • Automation</p>
 
               <p class="project-card__desc">
-                Built an AI email assistant with Google OAuth and Gmail API integration, plus a dashboard
-                to read, summarize, draft replies, and delete emails.
+                Built an AI email assistant with Google OAuth and Gmail API integration, plus a dashboard to read,
+                summarize, draft replies, and delete emails.
               </p>
 
               <div class="tag-list">
@@ -227,8 +224,8 @@
               <p class="project-card__meta">Aug–Dec 2024 • Social • Recommendations</p>
 
               <p class="project-card__desc">
-                Full-stack recipe platform for posting, browsing, saving, and engagement with smart filtering
-                and a shopping list generator.
+                Full-stack recipe platform for posting, browsing, saving, and engagement with smart filtering and
+                a shopping list generator.
               </p>
 
               <div class="tag-list">
@@ -296,12 +293,10 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class="section" id="contact" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-    <div class="container">
+    <!-- Contact -->
+    <section class="section" id="contact" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
       <div class="section-head">
         <h2 class="section-title">Contact</h2>
         <p class="section-subtitle">Quick message — I’ll reply.</p>
@@ -329,27 +324,28 @@
           <button type="submit" class="btn btn--primary">Send</button>
         </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__text">© <span id="year"></span> Kritika Garg</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p class="footer__text">© <span id="year"></span> Kritika Garg</p>
 
-      <div class="footer__social">
-        <a class="icon-link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <i class="bx bxl-github"></i>
-        </a>
-        <a class="icon-link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-          <i class="bx bxl-linkedin"></i>
-        </a>
-        <a class="icon-link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-          <i class="bx bxl-twitter"></i>
-        </a>
+        <div class="footer__social">
+          <a class="icon-link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a class="icon-link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+            <i class="bx bxl-twitter"></i>
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+
+  </div><!-- /shell -->
 
   <!-- Scripts -->
   <script src="scripts.js"></script>
