@@ -5,317 +5,348 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kritika Garg | Portfolio</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-  <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
-<body class="dark-mode">
+<body class="light-mode">
 
   <!-- Header -->
   <header class="header">
-    <a href="#" class="logo">Portfolio</a>
+    <div class="container header__inner">
+      <a href="#home" class="logo">Kritika Garg</a>
 
-    <nav class="navbar" id="navbar">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#skills" class="nav-link">Skills</a>
-      <a href="#work" class="nav-link">Work</a>
-      <a href="#contact" class="nav-link">Contact Me</a>
+      <nav class="navbar" id="navbar" aria-label="Primary navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
 
-      <a href="#" class="settings-icon" aria-label="Open settings">
-        <i class='bx bx-cog' id="menu-icon"></i>
-      </a>
-    </nav>
+        <button class="icon-btn settings-icon" type="button" aria-label="Open settings">
+          <i class='bx bx-cog' id="menu-icon"></i>
+        </button>
+      </nav>
 
-    <button class="hamburger" id="hamburger" aria-label="Open menu">
-      <i class="fas fa-bars"></i>
-    </button>
+      <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </header>
 
   <!-- Sidebar -->
   <aside class="sidebar" id="sidebar" aria-label="Settings sidebar">
     <div class="sidebar__header">
-      <button class="sidebar__close" id="close-btn" aria-label="Close settings">&times;</button>
       <h2 class="sidebar__title">Settings</h2>
+      <button class="icon-btn sidebar__close" id="close-btn" aria-label="Close settings">&times;</button>
     </div>
 
-    <ul class="sidebar__links">
-      <li class="sidebar__item">
+    <div class="sidebar__content">
+      <div class="setting-row">
+        <div>
+          <p class="setting-title">Theme</p>
+          <p class="setting-subtitle">Toggle light/dark</p>
+        </div>
         <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
           <i class="fas fa-moon"></i>
         </button>
-      </li>
-    </ul>
+      </div>
+    </div>
   </aside>
 
   <!-- Home -->
-  <section class="home section" id="home">
-    <div class="home__content">
-      <h3 class="home__hello">Hello, Its me.</h3>
-      <h1 class="home__name">Kritika Garg</h1>
+  <section class="section hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="kicker">Full-stack Developer</p>
+        <h1 class="hero__title">Hi, I’m Kritika.</h1>
 
-      <h3 class="home__role">
-        And I'm a <span class="typing"></span>
-      </h3>
+        <p class="hero__subtitle">
+          I build reliable web apps with a focus on backend systems, integrations, and production readiness.
+        </p>
 
-      <p class="home__quote">"Empowering innovation through code, building the future with every project."</p>
+        <div class="hero__meta">
+          <span class="meta-pill"><i class="bx bx-code-alt"></i> <span class="typing"></span></span>
+          <span class="meta-pill"><i class="bx bx-map"></i> India</span>
+        </div>
 
-      <div class="social-media">
-        <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <i class='bx bxl-instagram'></i>
-        </a>
-        <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-          <i class="bx bxl-twitter"></i>
-        </a>
-        <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-          <i class="bx bxl-linkedin"></i>
-        </a>
-        <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <i class="bx bxl-github"></i>
-        </a>
+        <div class="cta-row">
+          <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
+          <a href="#work" class="btn btn--secondary">View Work</a>
+        </div>
+
+        <div class="social-media">
+          <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <i class='bx bxl-instagram'></i>
+          </a>
+          <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
       </div>
 
-      <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
-    </div>
-
-    <div class="home__img">
-      <img class="profile-img" src="image/myy.JPG" alt="profile picture" loading="lazy" />
+      <div class="hero__image">
+        <div class="avatar">
+          <img class="avatar__img" src="image/profile.jpeg" alt="Kritika Garg" loading="lazy" />
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About (placeholder - keep id for nav) -->
-  <section class="about section" id="about">
-    <div class="section-head">
-      <h2 class="section-title">About</h2>
-      <p class="section-subtitle">Full-stack developer focused on backend systems, integrations, and building reliable production apps.</p>
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">
+          Full-stack developer focused on backend systems, integrations, and building reliable production apps.
+        </p>
+      </div>
+
+      <div class="about-card">
+        <p class="about-text">
+          I like working on the “hard parts” that decide whether an app feels solid: authentication, API design,
+          integrations, edge cases, and debugging. I care about clean code, clear structure, and shipping features
+          that work end-to-end.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <p class="stat__value">4+</p>
+            <p class="stat__label">Projects shipped</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">Auth</p>
+            <p class="stat__label">OAuth / JWT / RBAC</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value">APIs</p>
+            <p class="stat__label">REST + integrations</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="skills section" id="skills" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-    <div class="section-head">
-      <h2 class="section-title">Skills</h2>
+  <section class="section" id="skills" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Focused tools I use to build and ship.</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn" onclick="filterSkills('all')">All</button>
+        <button class="filter-btn" onclick="filterSkills('frontend')">Frontend</button>
+        <button class="filter-btn" onclick="filterSkills('backend')">Backend</button>
+        <button class="filter-btn" onclick="filterSkills('database')">Database</button>
+        <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
+        <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control</button>
+        <button class="filter-btn" onclick="filterSkills('Programminglanguages')">Languages</button>
+      </div>
+
+      <ul class="skills-list" id="skills-list">
+        <li class="skill frontend">HTML</li>
+        <li class="skill frontend">CSS</li>
+        <li class="skill frontend">JavaScript</li>
+        <li class="skill frontend">React</li>
+        <li class="skill frontend">Next.js</li>
+        <li class="skill frontend">Tailwind</li>
+
+        <li class="skill backend">Node.js</li>
+        <li class="skill backend">Express</li>
+        <li class="skill backend">FastAPI</li>
+
+        <li class="skill database">PostgreSQL</li>
+        <li class="skill database">MySQL</li>
+
+        <li class="skill Tools">Postman</li>
+        <li class="skill Tools">Jira</li>
+        <li class="skill Tools">Agile (Scrum)</li>
+
+        <li class="skill VersionControl">Git</li>
+        <li class="skill VersionControl">GitHub</li>
+
+        <li class="skill Programminglanguages">Java</li>
+        <li class="skill Programminglanguages">Python</li>
+      </ul>
     </div>
-
-    <div class="filter-buttons">
-      <button class="filter-btn" onclick="filterSkills('all')">All Skills</button>
-      <button class="filter-btn" onclick="filterSkills('frontend')">Frontend</button>
-      <button class="filter-btn" onclick="filterSkills('backend')">Backend</button>
-      <button class="filter-btn" onclick="filterSkills('database')">Database</button>
-      <button class="filter-btn" onclick="filterSkills('Tools')">Tools</button>
-      <button class="filter-btn" onclick="filterSkills('VersionControl')">Version Control</button>
-      <button class="filter-btn" onclick="filterSkills('Programminglanguages')">Programming languages</button>
-    </div>
-
-    <ul class="skills-list" id="skills-list">
-      <li class="skill frontend">HTML</li>
-      <li class="skill frontend">CSS</li>
-      <li class="skill frontend">JavaScript</li>
-      <li class="skill frontend">React JS</li>
-      <li class="skill frontend">Tailwind CSS</li>
-      <li class="skill frontend">Next.js</li>
-
-      <li class="skill backend">Node.js</li>
-      <li class="skill backend">Express.js</li>
-
-      <li class="skill database">MySQL</li>
-      <li class="skill database">PostgreSQL</li>
-
-      <li class="skill Tools">Agile (Scrum)</li>
-      <li class="skill Tools">Jira</li>
-      <li class="skill Tools">Postman</li>
-
-      <li class="skill VersionControl">Git</li>
-      <li class="skill VersionControl">GitHub</li>
-
-      <li class="skill Programminglanguages">Java</li>
-      <li class="skill Programminglanguages">Python</li>
-    </ul>
   </section>
 
   <!-- Work -->
-  <section class="work section" id="work" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    <div class="section-head section-head--work">
-      <h2 class="section-title">Check Out My Latest Work</h2>
-      <p class="section-subtitle">
-        I've worked on a variety of projects, from simple websites to complex web applications.
-        Here are a few of my favorites.
-      </p>
-    </div>
-
-    <div class="swiper container">
-      <div class="swiper-wrapper">
-
-        <!-- Constructure AI -->
-        <article class="project-card swiper-slide">
-          <img class="project-card__img" src="image/constructureai.png" alt="Constructure AI Email Assistant" loading="lazy" />
-          <h3 class="project-card__title">Constructure AI – AI Powered Email Assistant (Feb 2026)</h3>
-
-          <p class="project-card__desc">
-            Built a full-stack AI email assistant as a technical challenge with Google OAuth login,
-            Gmail API integration, and an AI dashboard to read, summarize, draft replies, and delete emails.
-            <br /><br />
-            Deployed frontend on Vercel and backend with FastAPI, handling authentication, token refresh, and secure email automation.
-          </p>
-
-          <div class="tag-list">
-            <span class="tag">FastAPI</span>
-            <span class="tag">Next.js</span>
-            <span class="tag">Google OAuth</span>
-            <span class="tag">Gmail API</span>
-            <span class="tag">AI Integration</span>
-          </div>
-
-          <div class="btn-row">
-            <a class="btn btn--light" href="https://github.com/kritikaspidy/Constructure-AI.git" target="_blank" rel="noreferrer">Source</a>
-            <a class="btn btn--light" href="https://constructure-ai-cyan.vercel.app" target="_blank" rel="noreferrer">Live App</a>
-          </div>
-        </article>
-
-        <!-- Plates & Palettes -->
-        <article class="project-card swiper-slide">
-          <img class="project-card__img" src="image/recipe.jpg" alt="Plates & Palettes" loading="lazy" />
-          <h3 class="project-card__title">Plates & Palettes: Recipe Sharing Platform (Aug 2024 – Dec 2024)</h3>
-
-          <p class="project-card__desc">
-            Designed a full-stack platform using React, Node.js (Express), and PostgreSQL for posting, browsing,
-            liking, commenting, and saving recipes.
-            <br /><br />
-            Integrated a shopping list generator and advanced filtering for personalized recommendations.
-          </p>
-
-          <div class="tag-list">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-
-          <div class="btn-row">
-            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Source</a>
-            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Website</a>
-          </div>
-        </article>
-
-        <!-- Car Rental -->
-        <article class="project-card swiper-slide">
-          <img class="project-card__img" src="image/car-rental.png" alt="Car Rental Platform" loading="lazy" />
-          <h3 class="project-card__title">Car Rental Platform (Jan 2025 – Jun 2025)</h3>
-
-          <p class="project-card__desc">
-            Engineered a full-stack multi-tenant car rental platform using the MERN stack.
-            Implemented REST APIs, JWT authentication, and role-based access control (RBAC) for listings, bookings, and users.
-            Built a responsive frontend with advanced search and filters for a smooth booking experience.
-          </p>
-
-          <div class="tag-list">
-            <span class="tag">MERN Stack</span>
-            <span class="tag">JWT Auth</span>
-            <span class="tag">RBAC</span>
-          </div>
-
-          <div class="btn-row">
-            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Source</a>
-            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Website</a>
-          </div>
-        </article>
-
-        <!-- Product Data Explorer -->
-        <article class="project-card swiper-slide">
-          <img class="project-card__img" src="image/books.png" alt="Product Data Explorer Platform" loading="lazy" />
-          <h3 class="project-card__title">Product Data Explorer Platform (Aug 2025 – Sep 2025)</h3>
-
-          <p class="project-card__desc">
-            Developed a product exploration platform using React/Next.js/TypeScript/Tailwind on the frontend and NestJS + PostgreSQL on the backend.
-            Implemented real-time scraping, caching, paging, and persistent browsing history with robust error handling.
-          </p>
-
-          <div class="tag-list">
-            <span class="tag">React</span>
-            <span class="tag">NestJS</span>
-            <span class="tag">PostgreSQL</span>
-          </div>
-
-          <div class="btn-row">
-            <a class="btn btn--light" href="#" target="_blank" rel="noreferrer">Source</a>
-            <a class="btn btn--light" href="https://webscrapping-six.vercel.app/" target="_blank" rel="noreferrer">Website</a>
-          </div>
-        </article>
-
+  <section class="section" id="work" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Work</h2>
+        <p class="section-subtitle">A few projects I’ve built and shipped.</p>
       </div>
 
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <div class="swiper container">
+        <div class="swiper-wrapper">
+
+          <article class="project-card swiper-slide">
+            <img class="project-card__img" src="image/constructureai.png" alt="Constructure AI Email Assistant" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">Constructure AI – AI Email Assistant</h3>
+              <p class="project-card__meta">Feb 2026 • OAuth • Gmail API • Automation</p>
+
+              <p class="project-card__desc">
+                Built an AI email assistant with Google OAuth and Gmail API integration, plus a dashboard
+                to read, summarize, draft replies, and delete emails.
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">FastAPI</span>
+                <span class="tag">Next.js</span>
+                <span class="tag">OAuth</span>
+                <span class="tag">Gmail API</span>
+              </div>
+
+              <div class="btn-row">
+                <a class="btn btn--secondary btn--sm" href="https://github.com/kritikaspidy/Constructure-AI.git" target="_blank" rel="noreferrer">Source</a>
+                <a class="btn btn--primary btn--sm" href="https://constructure-ai-cyan.vercel.app" target="_blank" rel="noreferrer">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card swiper-slide">
+            <img class="project-card__img" src="image/recipe.jpg" alt="Plates & Palettes" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">Plates & Palettes – Recipe Platform</h3>
+              <p class="project-card__meta">Aug–Dec 2024 • Social • Recommendations</p>
+
+              <p class="project-card__desc">
+                Full-stack recipe platform for posting, browsing, saving, and engagement with smart filtering
+                and a shopping list generator.
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">React</span>
+                <span class="tag">Node</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+
+              <div class="btn-row">
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Source</a>
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Website</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card swiper-slide">
+            <img class="project-card__img" src="image/car-rental.png" alt="Car Rental Platform" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">Car Rental Platform</h3>
+              <p class="project-card__meta">Jan–Jun 2025 • RBAC • Bookings</p>
+
+              <p class="project-card__desc">
+                Multi-tenant car rental platform with secure auth, RBAC, listings, and booking flows.
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">MERN</span>
+                <span class="tag">JWT</span>
+                <span class="tag">RBAC</span>
+              </div>
+
+              <div class="btn-row">
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Source</a>
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Website</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card swiper-slide">
+            <img class="project-card__img" src="image/books.png" alt="Product Data Explorer Platform" loading="lazy" />
+            <div class="project-card__body">
+              <h3 class="project-card__title">Product Data Explorer</h3>
+              <p class="project-card__meta">Aug–Sep 2025 • Scraping • Caching</p>
+
+              <p class="project-card__desc">
+                Product exploration with scraping, caching, paging, and robust error handling.
+              </p>
+
+              <div class="tag-list">
+                <span class="tag">Next.js</span>
+                <span class="tag">NestJS</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+
+              <div class="btn-row">
+                <a class="btn btn--secondary btn--sm" href="#" target="_blank" rel="noreferrer">Source</a>
+                <a class="btn btn--primary btn--sm" href="https://webscrapping-six.vercel.app/" target="_blank" rel="noreferrer">Live</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="contact section" id="contact" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-    <div class="section-head">
-      <h2 class="section-title">Get in Touch</h2>
-    </div>
+  <section class="section" id="contact" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Quick message — I’ll reply.</p>
+      </div>
 
-    <div class="contact-box">
-      <h3 class="contact-box__title">Want to chat?</h3>
+      <div class="contact-card">
+        <p class="contact-text">
+          DM on
+          <a class="link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
+          or
+          <a class="link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer">LinkedIn</a>,
+          or email
+          <a class="link" href="mailto:kritikagarg351@gmail.com">kritikagarg351@gmail.com</a>.
+        </p>
 
-      <p class="contact-box__text">
-        Just shoot me a DM on
-        <a class="contact-link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
-        /
-        <a class="contact-link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <br />
-        or send me an email at
-        <br />
-        <a class="contact-link" href="mailto:kritikagarg351@gmail.com">kritikagarg351@gmail.com</a>
-      </p>
+        <form class="contact-form" id="contact-form">
+          <div class="grid-2">
+            <input class="input" type="text" id="name" placeholder="Your Name" required />
+            <input class="input" type="email" id="email" placeholder="Your Email" required />
+          </div>
 
-      <form class="contact-form" id="contact-form">
-        <input class="input" type="text" id="name" placeholder="Your Name" required />
-        <input class="input" type="email" id="email" placeholder="Your Email" required />
-        <input class="input" type="text" id="subject" placeholder="Subject" />
+          <input class="input" type="text" id="subject" placeholder="Subject" />
+          <textarea class="textarea" id="message" rows="5" placeholder="Message" required></textarea>
 
-        <textarea class="textarea" id="message" rows="5" placeholder="Enter your message" required></textarea>
-
-        <input type="submit" value="Send Message" class="btn btn--primary btn--submit" />
-      </form>
+          <button type="submit" class="btn btn--primary">Send</button>
+        </form>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footerbg">
-      <div class="footer-container">
-        <div class="footer-brand">
-          <h2 class="footer-title">Kritika Garg</h2>
-          <span class="footer-subtitle">Fullstack Developer</span>
-        </div>
+    <div class="container footer__inner">
+      <p class="footer__text">© <span id="year"></span> Kritika Garg</p>
 
-        <ul class="footer-links">
-          <li><a class="footer-link" href="#skills">Skills</a></li>
-          <li><a class="footer-link" href="#contact">Connect</a></li>
-          <li><a class="footer-link" href="#work">Work</a></li>
-        </ul>
-
-        <div class="footer-social">
-          <a class="footer-social__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <i class='bx bxl-instagram'></i>
-          </a>
-          <a class="footer-social__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-            <i class="bx bxl-twitter"></i>
-          </a>
-          <a class="footer-social__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <i class="bx bxl-linkedin"></i>
-          </a>
-          <a class="footer-social__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <i class="bx bxl-github"></i>
-          </a>
-        </div>
+      <div class="footer__social">
+        <a class="icon-link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+        <a class="icon-link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+          <i class="bx bxl-twitter"></i>
+        </a>
       </div>
     </div>
   </footer>
@@ -325,7 +356,10 @@
   <script src="swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
 
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
