@@ -16,7 +16,6 @@
 
 <body class="light-mode">
 
-  <!-- PAGE SHELL (limits overall width) -->
   <div class="shell">
 
     <!-- Header -->
@@ -62,50 +61,45 @@
       </div>
     </aside>
 
-    <!-- Home -->
+    <!-- Home / Hero -->
     <section class="section hero" id="home">
-      <div class="hero__grid">
-        <div class="hero__content">
-          <p class="kicker">Full-stack Developer</p>
-          <h1 class="hero__title">Hi, I’m Kritika.</h1>
+      <div class="hero__stack">
 
-          <p class="hero__subtitle">
-            I build reliable web apps with a focus on backend systems, integrations, and production readiness.
-          </p>
-
-          <div class="hero__meta">
-            <span class="meta-pill"><i class="bx bx-code-alt"></i> <span class="typing"></span></span>
-            <span class="meta-pill"><i class="bx bx-map"></i> India</span>
-          </div>
-
-          <div class="now-strip">Currently open to Full Stack / Backend internships • Remote/India</div>
-
-          <div class="cta-row">
-            <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
-            <a href="#work" class="btn btn--secondary">View Work</a>
-          </div>
-
-          <div class="social-media">
-            <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <i class='bx bxl-instagram'></i>
-            </a>
-            <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-              <i class="bx bxl-twitter"></i>
-            </a>
-            <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <i class="bx bxl-linkedin"></i>
-            </a>
-            <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <i class="bx bxl-github"></i>
-            </a>
-          </div>
+        <div class="avatar hero__avatar">
+          <img class="avatar__img" src="image/profile.jpeg" alt="Kritika Garg" loading="lazy" />
         </div>
 
-        <div class="hero__image">
-          <div class="avatar">
-            <img class="avatar__img" src="image/profile.jpeg" alt="Kritika Garg" loading="lazy" />
-          </div>
+        <h1 class="hero__title">Hi, I’m Kritika.</h1>
+
+        <p class="hero__subtitle">
+          I build reliable web apps with a focus on backend systems, integrations, and production readiness.
+        </p>
+
+        <div class="hero__meta">
+          <span class="meta-pill"><i class="bx bx-code-alt"></i> <span class="typing"></span></span>
+          <span class="meta-pill"><i class="bx bx-map"></i> India</span>
         </div>
+
+        <div class="cta-row">
+          <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
+          <a href="#work" class="btn btn--secondary">View Work</a>
+        </div>
+
+        <div class="social-media hero__social">
+          <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <i class='bx bxl-instagram'></i>
+          </a>
+          <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -114,31 +108,12 @@
       <div class="section-head">
         <h2 class="section-title">About</h2>
         <p class="section-subtitle">
-          Full-stack developer focused on backend systems, integrations, and building reliable production apps.
+          I turn requirements into working products that feel polished and reliable.
+Strong backend, clean UI, and fast debugging.
         </p>
       </div>
 
-      <div class="about-card">
-        <p class="about-text">
-          I like working on the “hard parts” that decide whether an app feels solid: authentication, API design,
-          integrations, edge cases, and debugging. I care about clean structure and shipping end-to-end features.
-        </p>
 
-        <div class="about-stats">
-          <div class="stat">
-            <p class="stat__value">4+</p>
-            <p class="stat__label">Projects shipped</p>
-          </div>
-          <div class="stat">
-            <p class="stat__value">Auth</p>
-            <p class="stat__label">OAuth / JWT / RBAC</p>
-          </div>
-          <div class="stat">
-            <p class="stat__value">APIs</p>
-            <p class="stat__label">REST + integrations</p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Skills -->
@@ -222,8 +197,6 @@
         <p class="section-subtitle">A few projects I’ve built and shipped.</p>
       </div>
 
-     
-      <!-- Mobile: swiper only -->
       <div class="swiper work-swiper work-swiper--mobile">
         <div class="swiper-wrapper">
 
@@ -351,7 +324,7 @@
         <p class="section-subtitle">Quick message — I’ll reply.</p>
       </div>
 
-      <div class="contact-card">
+      <div class="contact-card contact-card--narrow">
         <p class="contact-text">
           DM on
           <a class="link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
@@ -378,7 +351,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="footer__inner">
-        <p class="footer__text">Kritika Garg</p>
+        <p class="footer__text">© <span id="year"></span> Kritika Garg</p>
 
         <div class="footer__social">
           <a class="icon-link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -394,7 +367,7 @@
       </div>
     </footer>
 
-  </div><!-- /shell -->
+  </div>
 
   <!-- Scripts -->
   <script src="scripts.js"></script>
@@ -404,7 +377,8 @@
 
   <script>
     AOS.init();
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
