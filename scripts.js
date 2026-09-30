@@ -1,203 +1,90 @@
-// Function to toggle additional info (used in the About section)
-function toggleInfo(id) {
-    const info = document.getElementById(id);
-    info.classList.toggle('show');
-}
+// Footer year
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// Flip card functionality (to flip qualifications, certifications, etc.)
-let lastFlipped = null;
+// Theme toggle (follows system by default, remembers manual choice)
+const root = document.documentElement;
+const isDark = () =>
+  root.dataset.theme
+    ? root.dataset.theme === "dark"
+    : window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-function flipCard(card) {
-    if (lastFlipped && lastFlipped !== card) {
-        lastFlipped.classList.remove("flipped");
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  const next = isDark() ? "light" : "dark";
+  root.dataset.theme = next;
+  try { localStorage.setItem("theme", next); } catch (e) {}
+});
+
+// Highlight the nav link for the section in view
+const links = document.querySelectorAll(".nav a[href^='#']");
+const sections = [...links].map((a) => document.querySelector(a.getAttribute("href")));
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      links.forEach((a) =>
+        a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id)
+      );
+    });
+  },
+  { rootMargin: "-40% 0px -55% 0px" }
+);
+sections.forEach((s) => s && observer.observe(s));
+
+
+// Typing effect on the designation
+(function () {
+  const el = document.getElementById("typed");
+  if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const words = ["Full stack developer", "Software developer"];
+  let w = 0, i = words[0].length, deleting = true; // starts fully typed, then cycles
+
+  function tick() {
+    const word = words[w];
+    el.textContent = word.slice(0, i);
+    let delay = deleting ? 40 : 90;
+
+    if (!deleting && i === word.length) { deleting = true; delay = 1800; }
+    else if (deleting && i === 0) { deleting = false; w = (w + 1) % words.length; delay = 350; }
+    else { i += deleting ? -1 : 1; }
+
+    setTimeout(tick, delay);
+  }
+  setTimeout(tick, 1800);
+})();
+
+// Contact form (EmailJS)
+(function () {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+  const btn = document.getElementById("send-btn");
+  const status = document.getElementById("form-status");
+
+  if (window.emailjs) emailjs.init({ publicKey: "HvzKH6rXLSuwvNAPM" });
+
+  const say = (msg, type) => { status.textContent = msg; status.className = "form__status " + (type || ""); };
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (!window.emailjs) { say("Email service didn't load. Please email me directly.", "err"); return; }
+
+    btn.disabled = true; btn.textContent = "Sending…"; say("");
+    try {
+      await emailjs.send("service_06g5u91", "template_wafq7p1", {
+        name: form.elements["name"].value,
+        email: form.elements["email"].value,
+        subject: form.elements["subject"].value,
+        message: form.elements["message"].value,
+      });
+      say("Message sent. Thanks, I'll reply soon.", "ok");
+      form.reset();
+    } catch (err) {
+      console.error("EmailJS failed:", err);
+      say("Couldn't send. Please email me directly instead.", "err");
+    } finally {
+      btn.disabled = false; btn.textContent = "Send message";
     }
-
-    card.classList.toggle("flipped");
-    lastFlipped = card.classList.contains("flipped") ? card : null;
-}
-
-// Filter Skills based on category selection
-function filterSkills(category) {
-    const skills = document.querySelectorAll("#skills-list li");
-    skills.forEach(skill => {
-        if (category === 'all' || skill.classList.contains(category)) {
-            skill.classList.remove('hide');
-            skill.classList.add('show');
-        } else {
-            skill.classList.remove('show');
-            skill.classList.add('hide');
-        }
-    });
-}
-filterSkills('all');
-
-const themeToggle = document.getElementById("theme-toggle");
-const body = document.body;
-
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("theme-toggle");
-    const body = document.body;
-    const sidebar = document.getElementById("sidebar"); // Ensure this is defined
-
-    // Check saved theme from localStorage
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme) {
-        body.classList.add(savedTheme);
-        sidebar.classList.add(savedTheme);
-        themeToggle.innerHTML = savedTheme === "dark-mode"
-            ? '<i class="fas fa-sun"></i>'  // Sun icon for dark mode
-            : '<i class="fas fa-moon"></i>'; // Moon icon for light mode
-    } else {
-        body.classList.add("dark-mode"); // Default to light mode
-        sidebar.classList.add("dark-mode");
-    }
-
-    // Toggle Theme
-    themeToggle.addEventListener("click", () => {
-        if (body.classList.contains("dark-mode")) {
-            body.classList.remove("dark-mode");
-            sidebar.classList.remove("dark-mode");
-            body.classList.add("light-mode");
-            sidebar.classList.add("light-mode");
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon
-            localStorage.setItem("theme", "light-mode");
-        } else {
-            body.classList.remove("light-mode");
-            sidebar.classList.remove("light-mode");
-            body.classList.add("dark-mode");
-            sidebar.classList.add("dark-mode");
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon
-            localStorage.setItem("theme", "dark-mode");
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var typed = new Typed(".typing", {
-        strings: ["Fullstack Engineer", "Software Developer"],
-        typeSpeed: 100,
-        backSpeed: 40,
-        loop: true
-    });
-});
-
-
-// Functionality to animate progress bars as the user scrolls to the skills section
-window.addEventListener('scroll', function () {
-    const skillsSection = document.querySelector('.skills');
-    const skillBoxes = document.querySelectorAll('.skill-box');
-
-    const sectionTop = skillsSection.offsetTop;
-    const sectionHeight = skillsSection.offsetHeight;
-    const scrollPosition = window.scrollY + window.innerHeight;
-
-    if (scrollPosition > sectionTop + sectionHeight / 4) {
-        skillBoxes.forEach(skillBox => {
-            skillBox.classList.add('active');
-            const progressBar = skillBox.querySelector('.progress');
-            const progress = progressBar.getAttribute('data-progress');
-            progressBar.style.width = progress;
-        });
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    let swiper = new Swiper(".swiper", {
-        spaceBetween: 24,
-        loop: true,
-        autoplay: {
-            delay: 2500, 
-            disableOnInteraction: false,
-        },
-        slidesPerView: 1,
-        grabCursor: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 48,
-        },
-        
-      },
-    });
-});
-
-
-
-// Get the elements
-const sidebar = document.getElementById('sidebar');
-const sidebarToggle = document.getElementById('menu-icon');
-const closeBtn = document.getElementById('close-btn');
-
-// Open the sidebar when the menu icon is clicked
-sidebarToggle.addEventListener('click', () => {
-    sidebar.classList.add('active');
-});
-
-// Close the sidebar when the close button is clicked
-closeBtn.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("HvzKH6rXLSuwvNAPM"); // Public key
-
-    const form = document.getElementById("contact-form");
-
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const params = {
-            name: document.getElementById("name").value,
-            email: document.getElementById("email").value,
-            subject: document.getElementById("subject").value,
-            message: document.getElementById("message").value,
-        };
-
-        emailjs
-            .send("service_06g5u91", "template_wafq7p1", params)
-            .then((res) => {
-                console.log("SUCCESS:", res.status, res.text);
-                alert("Message sent successfully!");
-                form.reset();
-            })
-            .catch((err) => {
-                console.error("FAILED:", err);
-                alert("Message failed. Check console.");
-            });
-    });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.getElementById("hamburger");
-    const navbar = document.querySelector(".navbar");
-    const navLinks = document.querySelectorAll(".navbar a");
-
-    hamburger.addEventListener("click", function () {
-        navbar.classList.toggle("active");
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            navbar.classList.remove("active");  // Closes menu after clicking a link
-        });
-    });
-});
-
-
-
-
-
+  });
+})();

@@ -2,411 +2,184 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kritika Garg | Portfolio</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kritika Garg — Software Developer</title>
+  <meta name="description" content="Kritika Garg is a full stack developer focused on backend systems, integrations, and production-ready web apps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 </head>
+<body>
 
-<body class="light-mode">
-
-  <div class="shell">
-
-    <!-- Header -->
-    <header class="header">
-      <div class="header__inner">
-        <a href="#home" class="logo">Kritika Garg</a>
-
-        <nav class="navbar" id="navbar" aria-label="Primary navigation">
-          <a href="#home" class="nav-link active">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#experience" class="nav-link">Experience</a>
-          <a href="#work" class="nav-link">Work</a>
-          <a href="#contact" class="nav-link">Contact</a>
-
-          <button class="icon-btn settings-icon" type="button" aria-label="Open settings">
-            <i class='bx bx-cog' id="menu-icon"></i>
-          </button>
-        </nav>
-
-        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">
-          <i class="fas fa-bars"></i>
+  <header class="header">
+    <div class="wrap header__inner">
+      <a href="#top" class="logo">kritika<span>.dev</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         </button>
-      </div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar" aria-label="Settings sidebar">
-      <div class="sidebar__header">
-        <h2 class="sidebar__title">Settings</h2>
-        <button class="icon-btn sidebar__close" id="close-btn" aria-label="Close settings">&times;</button>
-      </div>
+  <main class="wrap" id="top">
 
-      <div class="sidebar__content">
-        <div class="setting-row">
-          <div>
-            <p class="setting-title">Theme</p>
-            <p class="setting-subtitle">Toggle light/dark</p>
-          </div>
-          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
-            <i class="fas fa-moon"></i>
-          </button>
-        </div>
-      </div>
-    </aside>
+    <!-- Hero -->
+    <section class="hero">
+      <img class="hero__avatar" src="image/profile.jpeg" alt="Kritika Garg" width="72" height="72" />
+      <h1>Kritika Garg</h1>
+      <p class="hero__role"><span id="typed">Full stack developer</span><span class="caret" aria-hidden="true"></span></p>
+      <p class="hero__sub">Backend, integrations, and production readiness.</p>
+      <p class="hero__status"><span class="dot" aria-hidden="true"></span>Technical Business Analyst at Nvest &middot; Mumbai, India</p>
 
-    <!-- Home / Hero -->
-    <section class="section hero" id="home">
-      <div class="hero__stack">
-
-        <div class="avatar hero__avatar">
-          <img class="avatar__img" src="image/profile.jpeg" alt="Kritika Garg" loading="lazy" />
-        </div>
-
-        <h1 class="hero__title">Hi, I’m Kritika.</h1>
-
-        <p class="hero__subtitle">
-          I build reliable web apps with a focus on backend systems, integrations, and production readiness.
-        </p>
-
-        <div class="hero__meta">
-          <span class="meta-pill"><i class="bx bx-code-alt"></i> <span class="typing"></span></span>
-          <span class="meta-pill"><i class="bx bx-map"></i> India</span>
-        </div>
-
-        <div class="cta-row">
-          <a href="image/cv.pdf" class="btn btn--primary" download="cv">Download CV</a>
-          <a href="#work" class="btn btn--secondary">View Work</a>
-        </div>
-
-        <div class="social-media hero__social">
-          <a class="social-media__link" href="https://www.instagram.com/accounts/login/?hl=en" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <i class='bx bxl-instagram'></i>
-          </a>
-          <a class="social-media__link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-            <i class="bx bxl-twitter"></i>
-          </a>
-          <a class="social-media__link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <i class="bx bxl-linkedin"></i>
-          </a>
-          <a class="social-media__link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <i class="bx bxl-github"></i>
-          </a>
-        </div>
-
+      <div class="links">
+        <a class="btn btn--solid" href="image/cv.pdf" download="Kritika-Garg-CV.pdf">Resume</a>
+        <a class="btn" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
       </div>
     </section>
 
     <!-- About -->
-    <section class="section" id="about">
-      <div class="section-head">
-        <h2 class="section-title">About</h2>
-        <p class="section-subtitle">
-          I turn requirements into working products that feel polished and reliable.
-Strong backend, clean UI, and fast debugging.
-        </p>
-      </div>
+    <section id="about">
+      <h2 class="label">About</h2>
+      <p class="lead">
+        I turn requirements into working products that feel polished and reliable. My strengths are backend
+        development, clean UI, and fast debugging. I like tracing a problem to its root cause instead of patching symptoms.
+      </p>
 
-
-    </section>
-
-    <!-- Skills -->
-    <section class="section" id="skills" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="150">
-      <div class="section-head">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-subtitle">Tools I use to build and ship products.</p>
-      </div>
-
-      <div class="skills-grid">
-        <article class="skill-card">
-          <div class="skill-card__top">
-            <div class="skill-icons" aria-label="Frontend logos">
-              <i class="devicon-html5-plain colored" title="HTML"></i>
-              <i class="devicon-css3-plain colored" title="CSS"></i>
-              <i class="devicon-javascript-plain colored" title="JavaScript"></i>
-              <i class="devicon-react-original colored" title="React"></i>
-              <i class="devicon-nextjs-original" title="Next.js"></i>
-              <i class="devicon-tailwindcss-original colored" title="Tailwind CSS"></i>
-            </div>
-            <h3 class="skill-card__title">Frontend</h3>
-          </div>
-          <p class="skill-card__desc">Responsive UI, components, state management, and performance.</p>
-          <div class="skill-list" aria-label="Frontend skills">
-            <span>React</span><span>Next.js</span><span>JavaScript</span><span>HTML/CSS</span><span>Tailwind</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-card__top">
-            <div class="skill-icons" aria-label="Backend logos">
-              <i class="devicon-nodejs-plain colored" title="Node.js"></i>
-              <i class="devicon-express-original" title="Express"></i>
-              <i class="devicon-python-plain colored" title="Python"></i>
-              <i class="devicon-fastapi-plain colored" title="FastAPI"></i>
-            </div>
-            <h3 class="skill-card__title">Backend</h3>
-          </div>
-          <p class="skill-card__desc">APIs, authentication, integrations, error handling, and reliability.</p>
-          <div class="skill-list" aria-label="Backend skills">
-            <span>FastAPI</span><span>Node.js</span><span>Express</span><span>OAuth</span><span>REST</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-card__top">
-            <div class="skill-icons" aria-label="Database logos">
-              <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
-              <i class="devicon-mysql-plain colored" title="MySQL"></i>
-            </div>
-            <h3 class="skill-card__title">Database</h3>
-          </div>
-          <p class="skill-card__desc">Schema design, relations, indexing, and writing clean queries.</p>
-          <div class="skill-list" aria-label="Database skills">
-            <span>PostgreSQL</span><span>MySQL</span><span>Joins</span><span>Indexes</span>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <div class="skill-card__top">
-            <div class="skill-icons" aria-label="Tools logos">
-              <i class="devicon-git-plain colored" title="Git"></i>
-              <i class="devicon-github-original" title="GitHub"></i>
-              <i class="devicon-postman-plain colored" title="Postman"></i>
-              <i class="devicon-jira-plain colored" title="Jira"></i>
-            </div>
-            <h3 class="skill-card__title">Tools</h3>
-          </div>
-          <p class="skill-card__desc">Version control, API testing, and execution workflows.</p>
-          <div class="skill-list" aria-label="Tools skills">
-            <span>Git</span><span>GitHub</span><span>Postman</span><span>Jira</span><span>Scrum</span>
-          </div>
-        </article>
-      </div>
+      <dl class="stack">
+        <div><dt>Frontend</dt><dd>React, Next.js, JavaScript, HTML/CSS, Tailwind</dd></div>
+        <div><dt>Backend</dt><dd>Node.js, Express, FastAPI, Python, C#, REST, OAuth</dd></div>
+        <div><dt>Database</dt><dd>PostgreSQL, MySQL</dd></div>
+        <div><dt>Tools</dt><dd>Git, GitHub, Postman, Jira</dd></div>
+      </dl>
     </section>
 
     <!-- Experience -->
-    <section class="section" id="experience" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-      <div class="section-head">
-        <h2 class="section-title">Experience</h2>
-        <p class="section-subtitle">Roles where I've shipped real product and technical work.</p>
-      </div>
+    <section id="experience">
+      <h2 class="label">Experience</h2>
 
-      <div class="exp-list">
-
-        <article class="exp-row exp-row--current">
-          <div class="exp-row__top">
-            <h3 class="exp-row__role">Technical Business Analyst</h3>
-            <span class="exp-row__date">Jun 2026 — Present</span>
-          </div>
-          <p class="exp-row__sub">Nvest <span class="exp-row__dot">•</span> Mumbai, Maharashtra, India</p>
-          <ul class="exp-row__list">
-            <li>Translate product requirements from business stakeholders into concrete schema changes and application logic, writing and reviewing SQL against production PostgreSQL/MySQL databases.</li>
-            <li>Configure and debug dashboards and product setups inside the company's BI tool, writing SQL queries to validate data integrity and catch reporting discrepancies before they reach users.</li>
-            <li>Read and fix code-level bugs in C# services and JavaScript front-end components, pairing with engineers to trace issues back to root cause rather than just patching symptoms.</li>
-            <li>Sit between product, data, and engineering on a daily basis — the kind of cross-functional, technical delivery work that maps directly to customer-facing technical roles.</li>
+      <article class="job">
+        <p class="job__date">Jun 2026 — Present</p>
+        <div>
+          <h3>Technical Business Analyst <span>· Nvest</span></h3>
+          <p class="job__place">Mumbai, India</p>
+          <ul>
+            <li>Turn product requirements into schema changes and application logic, writing and reviewing SQL on production PostgreSQL and MySQL databases.</li>
+            <li>Configure and debug dashboards in the company BI tool, validating data with SQL to catch reporting discrepancies before they reach users.</li>
+            <li>Fix bugs in C# services and JavaScript front-end components, tracing issues to root cause alongside engineers.</li>
+            <li>Work daily across product, data, and engineering.</li>
           </ul>
-          <div class="tag-list">
-            <span class="tag">SQL</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">C#</span>
-            <span class="tag">JavaScript</span>
-          </div>
-        </article>
+          <p class="tags"><span>SQL</span><span>PostgreSQL</span><span>C#</span><span>JavaScript</span></p>
+        </div>
+      </article>
 
-        <article class="exp-row">
-          <div class="exp-row__top">
-            <h3 class="exp-row__role">Full Stack Developer</h3>
-            <span class="exp-row__date">Nov 2025 — May 2026</span>
-          </div>
-          <p class="exp-row__sub">SNIG UK Limited <span class="exp-row__dot">•</span> London, UK · Remote</p>
-          <ul class="exp-row__list">
-            <li>Built and shipped UI features in React and Next.js for both the marketing website and the product app, from component design through to production deploy.</li>
-            <li>Designed and implemented RESTful API endpoints in Node.js/Express, including request validation, error handling, and the business logic behind core product flows.</li>
-            <li>Worked directly with PostgreSQL/MySQL for data modeling and queries, and coordinated with a fully distributed remote team to turn product specs into shipped software.</li>
+      <article class="job">
+        <p class="job__date">Nov 2025 — May 2026</p>
+        <div>
+          <h3>Full Stack Developer <span>· SNIG UK Limited</span></h3>
+          <p class="job__place">London, UK · Remote</p>
+          <ul>
+            <li>Built and shipped UI features in React and Next.js for the marketing site and product app, from component design to production deploy.</li>
+            <li>Designed RESTful APIs in Node.js/Express with request validation, error handling, and core business logic.</li>
+            <li>Modeled data and wrote queries in PostgreSQL and MySQL, working with a fully distributed team.</li>
           </ul>
-          <div class="tag-list">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">MySQL</span>
-          </div>
-        </article>
+          <p class="tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>MySQL</span></p>
+        </div>
+      </article>
 
-        <article class="exp-row">
-          <div class="exp-row__top">
-            <h3 class="exp-row__role">Web Scraping Engineer</h3>
-            <span class="exp-row__date">Oct 2025</span>
-          </div>
-          <p class="exp-row__sub">AbleSpace — IEP Goal Tracking App <span class="exp-row__dot">•</span> SF Bay Area · Remote</p>
-          <ul class="exp-row__list">
-            <li>Wrote TypeScript scraping scripts to pull structured data from external sources and normalize it into the schema powering the app's database and website.</li>
-            <li>Replaced a manual, spreadsheet-driven data entry process with an automated pipeline, cutting turnaround time and reducing data errors.</li>
+      <article class="job">
+        <p class="job__date">Oct 2025</p>
+        <div>
+          <h3>Web Scraping Engineer <span>· AbleSpace</span></h3>
+          <p class="job__place">IEP Goal Tracking App · Remote</p>
+          <ul>
+            <li>Wrote TypeScript scrapers that pull structured data from external sources and normalize it into the app's database schema.</li>
+            <li>Replaced a manual, spreadsheet-driven entry process with an automated pipeline, cutting turnaround time and data errors.</li>
           </ul>
-          <div class="tag-list">
-            <span class="tag">TypeScript</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Web Scraping</span>
-          </div>
-        </article>
-
-      </div>
+          <p class="tags"><span>TypeScript</span><span>Node.js</span><span>Web Scraping</span></p>
+        </div>
+      </article>
     </section>
 
-    <!-- Work -->
-    <section class="section" id="work" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-      <div class="section-head">
-        <h2 class="section-title">Work</h2>
-        <p class="section-subtitle">A few projects I’ve built and shipped.</p>
+    <!-- Projects -->
+    <section id="projects">
+      <h2 class="label">Projects</h2>
+
+      <div class="projects">
+        <article class="project">
+          <img src="image/constructureai.png" alt="BuildSense AI email assistant screenshot" loading="lazy" />
+          <h3>BuildSense AI</h3>
+          <p class="project__meta">Email assistant · Feb 2026</p>
+          <p>Gmail API and OAuth integration for email summarization, smart replies, and automated inbox management.</p>
+          <p class="tags"><span>FastAPI</span><span>Next.js</span><span>OAuth</span><span>Gmail API</span></p>
+          <p class="project__links">
+            <a href="https://constructure-ai-cyan.vercel.app" target="_blank" rel="noreferrer">Live ↗</a>
+            <a href="https://github.com/kritikaspidy/Constructure-AI" target="_blank" rel="noreferrer">Code ↗</a>
+          </p>
+        </article>
+
+        <article class="project">
+          <img src="image/finrisk.png" alt="FinRisk credit risk prediction screenshot" loading="lazy" />
+          <h3>FinRisk</h3>
+          <p class="project__meta">Credit risk prediction · 2026</p>
+          <p>Machine learning model that predicts customer credit risk from financial and behavioral data, flagging high-risk applicants.</p>
+          <p class="tags"><span>Python</span><span>Scikit-learn</span><span>Pandas</span></p>
+          <p class="project__links">
+            <a href="https://finrisk.pages.dev/" target="_blank" rel="noreferrer">Live ↗</a>
+            <a href="https://github.com/kritikaspidy/FinRisk" target="_blank" rel="noreferrer">Code ↗</a>
+          </p>
+        </article>
       </div>
 
-      <div class="swiper work-swiper work-swiper--mobile">
-  <div class="swiper-wrapper">
-
-    <!-- Project 1 -->
-    <article class="project-card swiper-slide">
-      <div class="project-card__media">
-        <img class="project-card__img" src="image/constructureai.png" alt="AI Email Assistant" loading="lazy" />
-        <div class="project-card__overlay"></div>
-      </div>
-
-      <div class="project-card__body">
-        <h3 class="project-card__title">BuildSense AI – Email Assistant</h3>
-        <p class="project-card__meta">Feb 2026 • AI Automation • Gmail Integration</p>
-
-        <p class="project-card__desc">
-          AI-powered email assistant with Gmail API and OAuth enabling email summarization,
-          smart replies, and automated inbox management.
-        </p>
-
-        <div class="tag-list">
-          <span class="tag">FastAPI</span>
-          <span class="tag">Next.js</span>
-          <span class="tag">OAuth</span>
-          <span class="tag">Gmail API</span>
-        </div>
-
-        <div class="btn-row">
-          <a class="btn btn--secondary btn--sm" href="https://github.com/kritikaspidy/Constructure-AI.git" target="_blank">Code</a>
-          <a class="btn btn--primary btn--sm" href="https://constructure-ai-cyan.vercel.app" target="_blank">Live</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 2 -->
-    <!-- Project 2 -->
-<article class="project-card swiper-slide">
-  <div class="project-card__media">
-    <img class="project-card__img" src="image/finrisk.png" alt="Credit Risk Prediction System" loading="lazy" />
-    <div class="project-card__overlay"></div>
-  </div>
-
-  <div class="project-card__body">
-    <h3 class="project-card__title">FinRisk: Credit Risk Prediction System</h3>
-    <p class="project-card__meta">2026 • Machine Learning • Fintech</p>
-
-    <p class="project-card__desc">
-      Built a machine learning model to predict customer credit risk using financial and behavioral data.
-      Improved decision-making by identifying high-risk applicants and reducing default probability.
-    </p>
-
-    <div class="tag-list">
-      <span class="tag">Python</span>
-      <span class="tag">Scikit-learn</span>
-      <span class="tag">Pandas</span>
-      <span class="tag">ML</span>
-    </div>
-
-    <div class="btn-row">
-      <a class="btn btn--secondary btn--sm" href="https://github.com/kritikaspidy/FinRisk.git" target="_blank">Code</a>
-      <a class="btn btn--primary btn--sm" href="https://finrisk.pages.dev/" target="_blank">Live</a>
-    </div>
-  </div>
-</article>
-
-  </div>
-
-  <!-- More Projects Button -->
-  <div style="text-align:center; margin-top: 2rem;">
-    <a href="https://www.notion.so/All-Projects-Kritika-Garg-33556bfe313680c68ddbd20700f6baca?source=copy_link" target="_blank">
-      <button class="btn btn--primary">View More Projects →</button>
-    </a>
-  </div>
-
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
+      <p class="more"><a href="https://www.notion.so/All-Projects-Kritika-Garg-33556bfe313680c68ddbd20700f6baca?source=copy_link" target="_blank" rel="noreferrer">All projects →</a></p>
     </section>
 
     <!-- Contact -->
-    <section class="section" id="contact" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
-      <div class="section-head">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">Quick message — I’ll reply.</p>
-      </div>
+    <section id="contact">
+      <h2 class="label">Contact</h2>
+      <p class="lead">Open to new roles and interesting problems. Email me or use the form below.</p>
+      <p><a class="email" href="mailto:kritikagarg351@gmail.com">kritikagarg351@gmail.com</a></p>
 
-      <div class="contact-card contact-card--narrow">
-        <p class="contact-text">
-          DM on
-          <a class="link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
-          or
-          <a class="link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer">LinkedIn</a>,
-          or email
-          <a class="link" href="mailto:kritikagarg351@gmail.com">kritikagarg351@gmail.com</a>.
-        </p>
-
-        <form class="contact-form" id="contact-form">
-          <div class="grid-2">
-            <input class="input" type="text" id="name" placeholder="Your Name" required />
-            <input class="input" type="email" id="email" placeholder="Your Email" required />
-          </div>
-
-          <input class="input" type="text" id="subject" placeholder="Subject" />
-          <textarea class="textarea" id="message" rows="5" placeholder="Message" required></textarea>
-
-          <button type="submit" class="btn btn--primary">Send</button>
-        </form>
-      </div>
+      <form class="form" id="contact-form" novalidate>
+        <div class="form__row">
+          <label class="field"><span>Name</span><input id="name" name="name" type="text" autocomplete="name" required /></label>
+          <label class="field"><span>Email</span><input id="email" name="email" type="email" autocomplete="email" required /></label>
+        </div>
+        <label class="field"><span>Subject</span><input id="subject" name="subject" type="text" /></label>
+        <label class="field"><span>Message</span><textarea id="message" name="message" rows="5" required></textarea></label>
+        <div class="form__foot">
+          <button class="btn btn--solid" type="submit" id="send-btn">Send message</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer__inner">
-        <p class="footer__text">© <span id="year"></span> Kritika Garg</p>
+  </main>
 
-        <div class="footer__social">
-          <a class="icon-link" href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer" aria-label="GitHub">
-            <i class="bx bxl-github"></i>
-          </a>
-          <a class="icon-link" href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-            <i class="bx bxl-linkedin"></i>
-          </a>
-          <a class="icon-link" href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer" aria-label="X">
-            <i class="bx bxl-twitter"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>© <span id="year"></span> Kritika Garg</p>
+      <p>
+        <a href="https://github.com/kritikaspidy" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/kritika-garg-14158a23b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://x.com/kritikaagarg" target="_blank" rel="noreferrer">X</a>
+      </p>
+    </div>
+  </footer>
 
-  </div>
-
-  <!-- Scripts -->
-  <script src="scripts.js"></script>
-  <script src="swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <script>
-    AOS.init();
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
